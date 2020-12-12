@@ -1,5 +1,6 @@
 import React,{useState, useEffect } from 'react';
 import './App.css';
+import Button from '@material-ui/core/Button';
 
 function App() {
 
@@ -9,9 +10,9 @@ function App() {
   return (
     <div className="App">
 
-        <button onClick={()=> setCounter(counter + 1)}>+</button>
-        <button onClick={()=> setCounter(counter - 1)}>-</button>
-        <p>{counter}</p>
+        <Button onClick={()=> setCounter(counter + 1)} variant="contained" color="primary">+</Button>
+        <Button onClick={()=> setCounter(counter - 1)} variant="contained" color="secondary">-</Button>
+        <h2>{counter}</h2>
     </div>
   );
 }
